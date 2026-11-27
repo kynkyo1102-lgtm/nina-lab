@@ -51,7 +51,7 @@ body.registration-guide main.guide-common-page .guide-common-title{font-size:28p
 .salon-guide-page .salon-map-legend{flex-wrap:wrap}
 .guide-list-page .guide-list-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
 .guide-list-page .guide-list-card{padding:14px}
-}</style></head>
+}</style><style>@media(min-width:1100px) and (hover:hover) and (pointer:fine){.guide-list-page .guide-list-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 36px;align-items:start}.desktop-index-group{min-width:0}.desktop-index-group h3{font-size:18px;color:#0055a4;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid #dce8f2}.desktop-index-group ul{margin:0;padding-left:20px;color:#0055a4}.desktop-index-group li{padding:5px 0}.desktop-index-group .guide-list-card{display:block;padding:4px 0;border:0;border-radius:0;background:transparent}.desktop-index-group .guide-list-card-title{font-size:15px;font-weight:650;text-decoration:underline;text-underline-offset:3px}.desktop-index-group .guide-list-card-category,.desktop-index-group .guide-list-card-desc,.desktop-index-group .guide-list-card-tags{display:none}}</style></head>
 <body class="registration-guide guide-list-page">
   <main class="guide-common-page guide-list-wrap">
     <nav class="guide-category-breadcrumb" aria-label="パンくずリスト">
@@ -84,7 +84,7 @@ body.registration-guide main.guide-common-page .guide-common-title{font-size:28p
   <script src="./guide-data.js?v=20261117-list1"></script>
   <script>
   (() => {
-    const articles = window.NINA_GUIDE_ARTICLES || [];
+    const articles = (window.NINA_GUIDE_ARTICLES || []).filter(item => !/guide-compliance-(contract|invite|products|sns)\.html|guide-c-bonus-cullinan-amf\.html/.test(item.href));
     const keywords = window.NINA_GUIDE_KEYWORDS || [];
     const categories = window.NINA_GUIDE_CATEGORIES || [];
     const params = new URLSearchParams(location.search);
@@ -111,8 +111,8 @@ body.registration-guide main.guide-common-page .guide-common-title{font-size:28p
       a.className = 'guide-tag';
 
       a.href = type === 'category'
-        ? '?category=' + encodeURIComponent(label)
-        : '?tag=' + encodeURIComponent(label);
+        ? location.pathname + '?category=' + encodeURIComponent(label)
+        : location.pathname + '?tag=' + encodeURIComponent(label);
 
       a.textContent = label;
 
@@ -186,6 +186,8 @@ body.registration-guide main.guide-common-page .guide-common-title{font-size:28p
 
       cards.innerHTML = '';
 
+      const desktop = matchMedia('(min-width:1100px) and (hover:hover) and (pointer:fine)').matches;
+      const groups = new Map();
       found.forEach(item => {
         const a = document.createElement('a');
         a.className = 'guide-list-card';
@@ -214,7 +216,20 @@ body.registration-guide main.guide-common-page .guide-common-title{font-size:28p
         });
 
         a.append(category, h, desc, tags);
-        cards.appendChild(a);
+        if (!desktop) { cards.appendChild(a); return; }
+        if (!groups.has(item.category)) {
+          const section = document.createElement('section');
+          section.className = 'desktop-index-group';
+          const heading = document.createElement('h3');
+          heading.textContent = item.category;
+          const list = document.createElement('ul');
+          section.append(heading,list);
+          cards.appendChild(section);
+          groups.set(item.category,list);
+        }
+        const li = document.createElement('li');
+        li.appendChild(a);
+        groups.get(item.category).appendChild(li);
       });
 
       status.textContent = found.length + 'ページ';
@@ -222,6 +237,7 @@ body.registration-guide main.guide-common-page .guide-common-title{font-size:28p
     }
 
     input.addEventListener('input', render);
+    matchMedia('(min-width:1100px) and (hover:hover) and (pointer:fine)').addEventListener('change', render);
     render();
   })();
   </script>

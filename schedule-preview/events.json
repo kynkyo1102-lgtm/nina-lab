@@ -7,7 +7,15 @@
     "type": "イベント",
     "organizer": "salon",
     "startTime": "13:30",
-    "endTime": "15:00"
+    "endTime": "15:00",
+    "venue": "",
+    "address": "",
+    "fee": "",
+    "eligibility": "",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-01-16",
@@ -17,7 +25,15 @@
     "type": "研修",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "12:00"
+    "endTime": "12:00",
+    "venue": "",
+    "address": "",
+    "fee": "",
+    "eligibility": "",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-01-28",
@@ -27,7 +43,15 @@
     "type": "セミナー",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "17:00"
+    "endTime": "17:00",
+    "venue": "きゅりあん 品川区立総合区民会館",
+    "address": "",
+    "fee": "2,000円",
+    "eligibility": "会員限定",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-02-13",
@@ -37,7 +61,15 @@
     "type": "研修",
     "organizer": "green",
     "startTime": "10:00",
-    "endTime": "18:00"
+    "endTime": "18:00",
+    "venue": "JR九州ホール",
+    "address": "〒812-0012 福岡県福岡市博多区博多駅中央街1-1 9階",
+    "fee": "3,000円（税込）",
+    "eligibility": "2026年8月度クリスタル以上",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "開催時間は予定です。",
+    "documentUrl": ""
   },
   {
     "start": "2027-02-20",
@@ -47,7 +79,15 @@
     "type": "セミナー",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "17:00"
+    "endTime": "17:00",
+    "venue": "今池ガスホール",
+    "address": "",
+    "fee": "2,000円",
+    "eligibility": "会員限定",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-02-26",
@@ -57,7 +97,15 @@
     "type": "研修",
     "organizer": "green",
     "startTime": "10:00",
-    "endTime": "18:00"
+    "endTime": "18:00",
+    "venue": "株式会社ニナファームジャポン事務局",
+    "address": "〒105-0001 東京都港区虎ノ門2-2-1 住友不動産虎ノ門タワー18階",
+    "fee": "3,000円（税込）",
+    "eligibility": "2026年8月度クリスタル以上",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "開催時間は予定です。",
+    "documentUrl": ""
   },
   {
     "start": "2027-03-06",
@@ -67,7 +115,15 @@
     "type": "研修",
     "organizer": "green",
     "startTime": "10:00",
-    "endTime": "18:00"
+    "endTime": "18:00",
+    "venue": "松下IMPホール",
+    "address": "〒540-6301 大阪府大阪市中央区城見1丁目3-7",
+    "fee": "3,000円（税込）",
+    "eligibility": "2026年8月度クリスタル以上",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "開催時間は予定です。",
+    "documentUrl": ""
   },
   {
     "start": "2027-04-03",
@@ -77,7 +133,15 @@
     "type": "セミナー",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "17:00"
+    "endTime": "17:00",
+    "venue": "久留米座",
+    "address": "",
+    "fee": "2,000円",
+    "eligibility": "会員限定",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-04-24",
@@ -87,7 +151,15 @@
     "type": "イベント",
     "organizer": "green",
     "startTime": "",
-    "endTime": ""
+    "endTime": "",
+    "venue": "",
+    "address": "",
+    "fee": "",
+    "eligibility": "",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-05-15",
@@ -97,7 +169,15 @@
     "type": "セミナー",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "17:00"
+    "endTime": "17:00",
+    "venue": "今池ガスホール",
+    "address": "",
+    "fee": "2,000円",
+    "eligibility": "会員限定",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-05-26",
@@ -107,7 +187,15 @@
     "type": "セミナー",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "17:00"
+    "endTime": "17:00",
+    "venue": "きゅりあん 品川区立総合区民会館",
+    "address": "",
+    "fee": "2,000円",
+    "eligibility": "会員限定",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-06-05",
@@ -117,7 +205,15 @@
     "type": "研修",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "12:00"
+    "endTime": "12:00",
+    "venue": "",
+    "address": "",
+    "fee": "",
+    "eligibility": "",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-08-04",
@@ -127,7 +223,15 @@
     "type": "セミナー",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "17:00"
+    "endTime": "17:00",
+    "venue": "きゅりあん 品川区立総合区民会館",
+    "address": "",
+    "fee": "2,000円",
+    "eligibility": "会員限定",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-08-08",
@@ -137,7 +241,15 @@
     "type": "セミナー",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "17:00"
+    "endTime": "17:00",
+    "venue": "久留米座",
+    "address": "",
+    "fee": "2,000円",
+    "eligibility": "会員限定",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-08-22",
@@ -147,7 +259,15 @@
     "type": "セミナー",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "17:00"
+    "endTime": "17:00",
+    "venue": "今池ガスホール",
+    "address": "",
+    "fee": "2,000円",
+    "eligibility": "会員限定",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-09-18",
@@ -157,7 +277,15 @@
     "type": "イベント",
     "organizer": "mad",
     "startTime": "",
-    "endTime": ""
+    "endTime": "",
+    "venue": "ザ・グランドホール（久留米シティプラザ）",
+    "address": "",
+    "fee": "",
+    "eligibility": "",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-09-26",
@@ -167,7 +295,15 @@
     "type": "研修",
     "organizer": "jack",
     "startTime": "12:00",
-    "endTime": "12:00"
+    "endTime": "12:00",
+    "venue": "",
+    "address": "",
+    "fee": "",
+    "eligibility": "",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-01-01",
@@ -177,7 +313,15 @@
     "type": "キャンペーン",
     "organizer": "campaign",
     "startTime": "",
-    "endTime": ""
+    "endTime": "",
+    "venue": "",
+    "address": "",
+    "fee": "",
+    "eligibility": "",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2027-06-01",
@@ -187,7 +331,15 @@
     "type": "キャンペーン",
     "organizer": "campaign",
     "startTime": "",
-    "endTime": ""
+    "endTime": "",
+    "venue": "",
+    "address": "",
+    "fee": "",
+    "eligibility": "",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   },
   {
     "start": "2026-11-01",
@@ -197,6 +349,14 @@
     "type": "キャンペーン",
     "organizer": "campaign",
     "startTime": "",
-    "endTime": ""
+    "endTime": "",
+    "venue": "",
+    "address": "",
+    "fee": "",
+    "eligibility": "",
+    "deadline": "",
+    "registrationUrl": "",
+    "notes": "",
+    "documentUrl": ""
   }
 ]

@@ -1,0 +1,230 @@
+
+<!doctype html>
+<html lang="ja">
+<head><base href="https://nina-kumamoto.com/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="メンバーズガイドのページをカテゴリ別に一覧できます。キーワードから検索もできます。">
+  <title>すべてのページ｜メンバーズガイド</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./guide-shared-chrome.css?v=20261124-operations">
+  <link rel="stylesheet" href="./guide-design-system.css?v=20261028-2">
+  <link rel="stylesheet" href="./guide-list.css?v=20261125-1">
+<style>@media(min-width:1100px) and (hover:hover) and (pointer:fine){
+body.registration-guide main.guide-common-page{max-width:1120px;padding:28px 32px 70px}
+body.registration-guide main.guide-common-page .guide-common-title{font-size:28px;margin-bottom:18px}
+.procedure-guide .procedure-section{padding:20px 24px}
+.procedure-guide .procedure-accordion{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.procedure-guide .procedure-category{min-width:0;margin:0}
+.procedure-guide .category-icon{width:44px;height:44px}
+.procedure-guide .category-icon svg{width:30px;height:30px}
+.procedure-guide .procedure-link{padding:12px 4px}
+.procedure-guide .procedure-section .inner-title{font-size:24px;margin-bottom:16px}
+.procedure-guide .mail-steps{gap:12px}
+.procedure-guide .return-refund-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.faq-page:has(>.faq-category){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 32px;align-items:start}
+.faq-page:has(>.faq-category)>:not(.faq-category){grid-column:1/-1}
+.faq-page .guide-section.faq-category{margin:0 0 18px;min-width:0}
+.faq-page .faq-question-list .faq-details summary{padding:11px 3px;font-size:15px}
+.faq-page .faq-answer{font-size:15px}
+.faq-example{max-width:480px}
+.compliance-page .cg-story-hero{padding:24px 18px 36px}
+.compliance-page .cg-hero-art{max-width:150px;margin:10px auto}
+.compliance-page .cg-story-hero h1{font-size:32px}
+.compliance-page .cg-law-intro{margin-bottom:40px;padding:24px 30px}
+.compliance-page .cg-law-illustration{width:140px}
+.compliance-page .cg-story-part+.cg-story-part{margin-top:36px}
+.compliance-page .cg-story-step{min-height:0;padding-bottom:36px;gap:16px;grid-template-columns:56px minmax(0,1fr)}
+.compliance-page .cg-story-marker span{width:48px;height:48px;font-size:18px}
+.compliance-page .cg-story-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 24px;align-items:center}
+.compliance-page .cg-story-body>.cg-story-kicker,.compliance-page .cg-story-body>h3{grid-column:1/-1;margin:0}
+.compliance-page .cg-story-body h3{font-size:23px}
+.compliance-page .cg-story-body>.cg-story-visual{grid-column:1;margin:0;max-width:360px}
+.compliance-page .cg-story-body>p{grid-column:2;margin:0;font-size:16px;line-height:1.9}
+.salon-guide main.salon-guide-page{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px 28px;align-items:start}
+.salon-guide-page>h1,.salon-guide-page>.salon-intro-row{grid-column:1/-1;margin:0}
+.salon-guide-page>.salon-map-section{grid-column:1;margin:0;min-width:0}
+.salon-guide-page>.salon-finder{grid-column:2;min-width:0;padding:18px}
+.salon-guide-page .salon-map-next{display:none}
+.salon-guide-page .salon-map-legend{flex-wrap:wrap}
+.guide-list-page .guide-list-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.guide-list-page .guide-list-card{padding:14px}
+}</style></head>
+<body class="registration-guide guide-list-page">
+  <main class="guide-common-page guide-list-wrap">
+    <nav class="guide-category-breadcrumb" aria-label="パンくずリスト">
+      <a href="./ninaguide.html">メンバーズガイド</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">すべてのページ</span>
+    </nav>
+
+    <section class="guide-list-head">
+      <h1 class="guide-common-title" id="listTitle">すべてのページ</h1>
+      <p class="guide-list-intro" id="listIntro">カテゴリから探したり、キーワードで絞り込んだりできます。</p>
+    </section>
+
+    <div class="guide-list-tools">
+      <label for="listSearch">ページ名やキーワードで検索</label>
+      <input id="listSearch" type="search" placeholder="例：WEB登録、支払い、停止" autocomplete="off">
+    </div>
+
+    <h2 id="keywordHeading">キーワードから探す</h2>
+    <div class="guide-list-keywords" id="keywordList" aria-label="キーワード一覧"></div>
+
+    <h2 id="categoryHeading">カテゴリから探す</h2>
+    <div class="guide-list-keywords" id="categoryList" aria-label="カテゴリ一覧"></div>
+
+    <p class="guide-list-status" id="resultStatus" aria-live="polite"></p>
+    <div class="guide-list-cards" id="articleCards"></div>
+    <p class="guide-list-empty" id="emptyMessage" hidden>該当するページがありません。別のキーワードで検索してください。</p>
+  </main>
+
+  <script src="./guide-data.js?v=20261117-list1"></script>
+  <script>
+  (() => {
+    const articles = window.NINA_GUIDE_ARTICLES || [];
+    const keywords = window.NINA_GUIDE_KEYWORDS || [];
+    const categories = window.NINA_GUIDE_CATEGORIES || [];
+    const params = new URLSearchParams(location.search);
+
+    const input = document.getElementById('listSearch');
+    const cards = document.getElementById('articleCards');
+    const status = document.getElementById('resultStatus');
+    const empty = document.getElementById('emptyMessage');
+    const title = document.getElementById('listTitle');
+    const intro = document.getElementById('listIntro');
+
+    const keywordHeading = document.getElementById('keywordHeading');
+    const keywordList = document.getElementById('keywordList');
+    const categoryHeading = document.getElementById('categoryHeading');
+    const categoryList = document.getElementById('categoryList');
+
+    const selectedTag = params.get('tag') || '';
+    const selectedCategory = params.get('category') || '';
+
+    input.value = params.get('q') || '';
+
+    function makeTag(label, type, selected) {
+      const a = document.createElement('a');
+      a.className = 'guide-tag';
+
+      a.href = type === 'category'
+        ? '?category=' + encodeURIComponent(label)
+        : '?tag=' + encodeURIComponent(label);
+
+      a.textContent = label;
+
+      if (selected) {
+        a.setAttribute('aria-pressed', 'true');
+      }
+
+      return a;
+    }
+
+    keywords.forEach(tag => {
+      keywordList.appendChild(
+        makeTag(tag, 'tag', selectedTag === tag)
+      );
+    });
+
+    categories.forEach(cat => {
+      categoryList.appendChild(
+        makeTag(cat, 'category', selectedCategory === cat)
+      );
+    });
+
+    function render() {
+      const rawQuery = input.value.trim();
+      const q = rawQuery.toLocaleLowerCase('ja');
+
+      // キーワード・カテゴリ・検索語が指定されている場合は、
+      // 探し方の一覧を隠し、ページの検索結果に集中できるようにする。
+      const showBrowseLists =
+        !selectedTag && !selectedCategory && !rawQuery;
+
+      keywordHeading.hidden = !showBrowseLists;
+      keywordList.hidden = !showBrowseLists;
+      categoryHeading.hidden = !showBrowseLists;
+      categoryList.hidden = !showBrowseLists;
+
+      if (selectedTag) {
+        title.textContent = 'キーワード：「' + selectedTag + '」';
+        intro.textContent = '「' + selectedTag + '」に関連するページです。';
+      } else if (selectedCategory) {
+        title.textContent = 'カテゴリ：' + selectedCategory;
+        intro.textContent = selectedCategory + 'に分類されたページです。';
+      } else if (rawQuery) {
+        title.textContent = '検索結果';
+        intro.textContent = 'ページ名とキーワードから検索しています。';
+      } else {
+        title.textContent = 'すべてのページ';
+        intro.textContent = 'カテゴリから探したり、キーワードで絞り込んだりできます。';
+      }
+
+      const found = articles.filter(item => {
+        const tags = item.tags || [];
+
+        const matchesTag =
+          !selectedTag || tags.includes(selectedTag);
+
+        const matchesCategory =
+          !selectedCategory || item.category === selectedCategory;
+
+        const searchText = [
+          item.title,
+          item.category,
+          item.description,
+          ...tags
+        ].join(' ').toLocaleLowerCase('ja');
+
+        return matchesTag &&
+          matchesCategory &&
+          (!q || searchText.includes(q));
+      });
+
+      cards.innerHTML = '';
+
+      found.forEach(item => {
+        const a = document.createElement('a');
+        a.className = 'guide-list-card';
+        a.href = item.href;
+
+        const category = document.createElement('span');
+        category.className = 'guide-list-card-category';
+        category.textContent = item.category;
+
+        const h = document.createElement('span');
+        h.className = 'guide-list-card-title';
+        h.textContent = item.title;
+
+        const desc = document.createElement('span');
+        desc.className = 'guide-list-card-desc';
+        desc.textContent = item.description;
+
+        const tags = document.createElement('span');
+        tags.className = 'guide-list-card-tags';
+
+        (item.tags || []).forEach(tag => {
+          const chip = document.createElement('span');
+          chip.className = 'guide-tag';
+          chip.textContent = tag;
+          tags.appendChild(chip);
+        });
+
+        a.append(category, h, desc, tags);
+        cards.appendChild(a);
+      });
+
+      status.textContent = found.length + 'ページ';
+      empty.hidden = found.length !== 0;
+    }
+
+    input.addEventListener('input', render);
+    render();
+  })();
+  </script>
+  
+<script src="./guide-shared-chrome.js?v=20261124-text-pref" defer></script></body>
+</html>

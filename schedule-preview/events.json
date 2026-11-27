@@ -188,5 +188,15 @@
     "organizer": "campaign",
     "startTime": "",
     "endTime": ""
+  },
+  {
+    "start": "2026-11-01",
+    "end": "2026-12-31",
+    "title": "新規登録キャンペーン",
+    "location": "",
+    "type": "キャンペーン",
+    "organizer": "campaign",
+    "startTime": "",
+    "endTime": ""
   }
 ]
